@@ -1,0 +1,97 @@
+<h1 class="moment"><b>Update new moments</b></h1>
+<div class="formContainer">
+    <form [formGroup]="momentForm" #mForm="ngForm" (ngSubmit)="updateMoment()">
+      <mat-label class="lable1">Title</mat-label><br>
+      <mat-form-field class="matTitle" floatLabel="never">
+        <input id="tle" matInput placeholder="Enter sample title" floatLable="never" formControlName="title" required>
+        
+      </mat-form-field><br><br><br>
+     
+      <!-- <span class="errMsg" *ngIf="title && title.invalid && title.touched"></span> -->
+  
+      <div
+        style="float: left;                                                                                                                                                ">
+  
+        <div>
+          <mat-label class="lable2">Tags</mat-label><br>
+          <mat-form-field class="matTag" floatLabel="never">
+  
+            <mat-chip-list #chipList aria-label="tags selection">
+              <mat-chip *ngFor="let tag of tags" (removed)="remove(tag)">
+                <!-- {{tag.name}} -->
+                {{tag}}
+                <button matChipRemove>
+                  <mat-icon>cancel</mat-icon>
+                </button>
+              </mat-chip>
+              <input placeholder="Type" [matChipInputFor]="chipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="addOnBlur" (matChipInputTokenEnd)="add($event)"  required>
+            </mat-chip-list>
+            <!-- <input matInput placeholder="Sample title" floatLable="never" > -->
+          </mat-form-field><br>
+          <span class="errMsg" *ngIf="tags.length==0">Enter Tags</span>
+        </div>
+  
+        <div class="upload">
+          <p *ngIf="uploadProgress > 0 && uploadProgress < 99">Uploading...</p>
+          <p *ngIf="uploadProgress == 100">Uploaded</p>
+  
+          <div>
+            <div class="imageIconDiv">
+              <img *ngIf="this.image" style="border-radius: 50%;" src="http://localhost:3000/{{this.image}}" width="50px"
+                  height="50px">
+              <!-- <mat-icon class="imageIcon"> images</mat-icon> -->
+            </div>
+            <!-- <div>
+              <img *ngIf="this.image" style="border-radius: 50%;" src="http://localhost:3000/{{this.image}}" width="50px"
+                  height="50px">
+          </div> -->
+          
+            <!-- <div class="progress inline-flex-action">
+                <p class="padding-top-10">{{ uploadProgress }}% done</p></div> -->
+            <div class="progressImageDiv">
+             
+              <mat-progress-bar mode="determinate" class="progress" [value]="uploadProgress"></mat-progress-bar>
+             
+            </div>
+            <button mat-icon-button *ngIf="uploadProgress > 0 && uploadProgress < 99"(click)="cancelUpload()">
+              <mat-icon> close</mat-icon>
+            </button> <span class="padding-top-10">{{ uploadProgress }}% done</span>
+          </div><br>
+  
+          <!-- <div class="fileDiv">
+         <div class="fileIconDiv"><mat-icon class="fileIcon"> <span class="material-icons-outlined">
+          description
+          </span></mat-icon></div>
+       <div class="progressFileDiv"> <mat-progress-bar mode="determinate" value="60" class="progress"></mat-progress-bar></div>
+       <button mat-icon-button><mat-icon style="color:gray"> close</mat-icon></button>
+      </div> -->
+  
+        </div>
+  
+      </div>
+      <div class="uploadBox">
+        <mat-icon class="uploadIcon"><span class="material-icons-outlined">
+            upload
+          </span>
+        </mat-icon><br>
+        <h3>Drag and drop file</h3>
+        <h2>OR</h2>
+  
+  
+        <button class="browseBtn" type="button" mat-raised-button (click)="fileInput.click()">Browse</button>
+  
+        <input hidden (change)="selectFiles($event)" #fileInput type="file"
+          accept="image/png,image/jpeg,image/jpg,application/pdf">
+  
+  
+      </div>
+  
+      <div><button class="submitBtn" [disabled]="momentForm.invalid || tags.length===0">Update</button></div>
+  
+  
+  
+    </form>
+  
+  
+  </div>

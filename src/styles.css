@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: linear-gradient(315deg, #6daddb 0%, #313131 74%);
+}
+
+.cdk-overlay-connected-position-bounding-box{
+    top: 37px !important; 
+    right: 12.3594px; height: 426px; 
+    width: 1820.64px; align-items: flex-end; justify-content: flex-start;
+  }
+
+  .success-snackbar {
+    background-color:green;
+    color: white
+}
+.error-snackbar {
+    background-color: #e74c3c;
+    color: white
+}
+.warn-snackbar {
+    background-color: orangered;
+    color: white
+}
+.info-snackbar {
+    background-color: #3498db;
+    color: white
+}
+.mat-simple-snackbar-action{
+    margin-top: 20px;
+    color: white
+}

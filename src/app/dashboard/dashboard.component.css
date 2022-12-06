@@ -1,0 +1,109 @@
+.toolBar{
+    background-color: white;
+/* background-image: linear-gradient(315deg, #6daddb 0%, #313131 74%); */
+height: 130px;
+}
+
+.img {
+    width:110px; 
+    height:110px; 
+    border-radius: 100px;   
+}
+
+ 
+  .profile{
+    font-size: 20px;
+    text-indent: 50px;
+    margin-top: 90px;
+  }
+ .dropdown{
+     margin-top: 50px;
+ }
+
+  .dropdownToggle{
+color: white;
+background-color: #151B54;
+width: 100%;
+height: 50px;
+border:none;
+margin-left: 0px;
+font-size: 20px;
+font-weight: bold;
+  }
+
+  .dropdown-menu{
+      border:none;
+    list-style-type:disc
+      
+      
+  }
+  .dropdown-item{
+    margin-left: 50px;
+    list-style-type: disc;
+  }
+  .ArrowIcon{
+      font-size: 30px;
+      margin-top: -100px; 
+      margin-left: -40px;
+     
+  }
+  .ArrowIcon1{
+    font-size: 20px;
+    font-weight: bold;
+   
+}
+  .logOutIcon{
+color: black;
+  }
+  .rose{
+    width:35px; 
+    height:35px; 
+    border-radius: 100px; 
+    margin-top: -90px; 
+    margin-left: 190px; 
+ 
+   
+}
+.signOutPos{
+  top: 37px;
+  right: 12.3594px;
+  height: 426px;
+  width: 1820.64px;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+.signoutMenu{
+position: absolute;
+margin-top: -290px;
+
+}
+#matMenu{
+    margin-top: -40px;
+}
+.menu{
+  margin-left: 100px;
+  margin-top: -80px;
+  color: black;
+}
+.example-container {
+  width: 100%;
+  height: 817px;
+  border-color: white;
+ 
+ 
+}
+.side{
+  width:280px;
+  border-color: white;
+ 
+}
+.imgSpan{
+  padding-left: 95px;
+}
+
+
+
+
+/* <div class="cdk-overlay-connected-position-bounding-box" dir="ltr" style="top: 83px; right: 12.3594px; height: 426px; width: 1820.64px; align-items: flex-end; justify-content: flex-start;"><div id="cdk-overlay-1" class="cdk-overlay-pane" style="position: static;"><div tabindex="-1" role="menu" class="mat-menu-panel ng-trigger ng-trigger-transformMenu ng-tns-c100-11 signOutPos signoutMenu mat-menu-before mat-menu-below mat-elevation-z4 ng-star-inserted" id="mat-menu-panel-1" ng-reflect-ng-class="[object Object]" style="transform-origin: right top;"><div class="mat-menu-content ng-tns-c100-11"><button _ngcontent-okt-c109="" mat-menu-item="" routerlink="/signIn" class="mat-focus-indicator mat-menu-item ng-tns-c100-11" tabindex="0" ng-reflect-router-link="/signIn" role="menuitem" aria-disabled="false">SignOut<div matripple="" class="mat-ripple mat-menu-ripple" ng-reflect-disabled="false" ng-reflect-trigger="[object HTMLButtonElement]"></div><!--bindings={
+  "ng-reflect-ng-if": "false"
+}--></button></div></div></div></div> */

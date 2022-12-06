@@ -1,0 +1,103 @@
+<mat-toolbar class="toolBar">
+
+  <span style="margin-left: 45.5%;"><img class="img" src="../assets/images/innerEye.jpg"></span>
+</mat-toolbar>
+
+<div class="divContainer">
+  <h1><b>Sign Up</b></h1>
+  <h3>To be a member</h3>
+  <form [formGroup]="signupForm" class="formStyle" >
+    <mat-grid-list cols="2" rowHeight="222">
+
+      <mat-grid-tile>
+        <div class="colleft">
+          <mat-label class="lable">First Name</mat-label><br>
+          <div class="icons">
+            <mat-icon>person_outline</mat-icon>
+          </div>
+          <mat-form-field class="name" floatLabel="never">
+            <input matInput placeholder="Uma" formControlName="firstName">
+          </mat-form-field><br>
+          <span class="errFirstName"
+            *ngIf="firstName && firstName.invalid && firstName.touched">Enter First Name</span><br><br>
+
+
+          <mat-label class="mobile">Mobile No</mat-label><br>
+          <div class="icons">
+            <mat-icon>phone</mat-icon>
+          </div>
+          <mat-form-field class="name" floatLabel="never">
+
+            <input matInput placeholder="8110099744" formControlName="mobileNumber">
+          </mat-form-field><br>
+          <span class="errMobile" *ngIf="mobileNumber && mobileNumber.invalid && mobileNumber.touched">Enter Valid mobile number</span><br>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="colRight">
+
+          <mat-label class="lable">Last Name</mat-label><br>
+
+          <div class="icons">
+            <mat-icon>person_outline</mat-icon>
+          </div>
+
+          <mat-form-field class="name" floatLabel="never">
+            <input matInput placeholder="Krishnamoorthy" formControlName="lastName">
+          </mat-form-field><br>
+          <span class="errLastName" *ngIf="lastName && lastName.invalid && lastName.touched">Enter Last name</span><br><br>
+
+          <mat-label class="lable">Email-ID</mat-label><br>
+          <div class="icons">
+            <mat-icon>mail</mat-icon>
+          </div>
+
+          <mat-form-field class="name" floatLabel="never">
+            <input matInput placeholder="Uma88.it@gmail.com" formControlName="emailId">
+          </mat-form-field><br>
+          <span class="errEmail" *ngIf="email && email.invalid && email.touched">Enter valid email-Id</span><br><br>
+        </div>
+
+      </mat-grid-tile>
+
+
+      <mat-grid-tile>
+        <div class="city">
+
+          <mat-label class="lable">City</mat-label><br>
+          <mat-form-field class="cityInputForm" floatLabel="never">
+            <input matInput placeholder="Chennai" floatLable="never" formControlName="city">
+          </mat-form-field><br>
+          <div><span class="errCity" *ngIf="city && city.invalid && city.touched">Enter city name</span></div>
+        </div>
+
+      </mat-grid-tile>
+
+
+      <mat-grid-tile>
+        <div class="colRight3">
+
+          <mat-label class="passwrd">Enter Password</mat-label><br>
+          <div class="icons">
+            <mat-icon>lock</mat-icon>
+          </div>
+
+
+          <mat-form-field class="name" floatLabel="never">
+            <input type="password" matInput placeholder="****************" formControlName="password" [type]="hide?'password':'text'">
+            <button style="font-size: 20px;" mat-icon-button matSuffix (click)="hide = !hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+
+          </mat-form-field><br>
+          <span class="errPasswrd" *ngIf="passWord && passWord.invalid && passWord.touched">Enter Password minimum 6 characters</span><br><br>
+
+
+        </div>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <button class="btn" type="submit" [disabled]="signupForm.invalid" (click)="signUp()">Submit</button>
+    <p class="alMem" routerLink="/signIn">Already a member? <span style="color:black;">Sign In</span></p>
+  </form>
+
+</div>

@@ -1,0 +1,55 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "moment": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    },
+    {
+      "firstName": "uma",
+      "lastName": "krishnamoorthy",
+      "mobileNumber": "8990090068",
+      "emailId": "uma88.it@gmail.com",
+      "city": "chennai",
+      "password": "1234566",
+      "id": 2
+    },
+    {
+      "firstName": "appu",
+      "lastName": "vedha",
+      "mobileNumber": "7676767676",
+      "emailId": "appu@gmail.com",
+      "city": "keiserslaturn",
+      "password": "123456a",
+      "id": 3
+    },
+    {
+      "firstName": "uma",
+      "lastName": "krishnamoorthy",
+      "mobileNumber": "8445656565",
+      "emailId": "uma88.it@gmail.com",
+      "city": "chennai",
+      "password": "123456q",
+      "id": 4
+    },
+    {
+      "firstName": "uma",
+      "lastName": "krishna",
+      "mobileNumber": "7657543535",
+      "emailId": "app@vasan.com",
+      "city": "madhurai",
+      "password": "123456q",
+      "id": 5
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

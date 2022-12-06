@@ -1,0 +1,112 @@
+.moment{
+  margin-left: 45px;
+}
+.formContainer{
+    padding-left: 100px;
+    padding-top: 120px;
+}
+
+.matTitle{
+   width: 80%;
+}
+.matTag{
+    width: 500px
+}
+
+  ::ng-deep .mat-form-field-underline {
+    /* display: none; */
+    color: blue;
+    opacity: 0.2;
+  }
+  .upload{
+    float: left;
+    margin-top: 30px; 
+    color:dimgray;
+   }
+ .progress{
+   width:350px;
+   height: 4px;
+   margin-left: 70px;
+
+  
+ }
+ /* .progress2{
+  width:350px;
+  height: 2px;
+  margin-top: 50px;
+  margin-left: 70px;
+ 
+} */
+.imageIconDiv{
+  float: left;
+}
+.imageIcon{
+  font-size: 80px;
+}
+.progressImageDiv{
+  float: left;
+  padding-top: 35px;
+}
+.fileDiv{
+  padding-top: 80px;
+}
+
+.fileIconDiv{
+  float: left;
+}
+.fileIcon{
+ font-size: 80px;
+}
+.progressFileDiv{
+  float: left;
+  padding-top: 42px;
+}
+.uploadBox{
+  float:right;
+  width: 300px;
+  height: 300px;
+  /* background-color: aqua; */
+  margin-right: 380px;
+  border:dashed;
+  border-color: gainsboro;
+ text-align: center;
+}
+.submitBtn{
+margin-top: 28%;
+width:200px;
+height: 50px;
+border-radius: 30px;
+font-size: 20px;
+font-weight: bold;
+color: white;
+background-color: #0e335f;
+}
+.browseBtn{
+  width:110px;
+  height:32px;
+  border-radius: 30px;
+  background-color: #0e335f;
+  color: white;
+  font-weight: bold;
+}
+h3{
+  color: dimgray;
+}
+.uploadIcon{
+  padding-top: 60px;
+  font-size: 45px;
+  padding-right: 40px;
+}
+::ng-deep .mat-progress-bar-buffer {
+  background:darkgrey;
+}
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: black;
+}
+
+.errMsg{
+  color:red;
+  margin-left: 0px;
+  padding-top: -40px;
+ 
+}

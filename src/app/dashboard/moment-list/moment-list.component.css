@@ -1,0 +1,67 @@
+
+/* .edit{
+    margin-right: 15px;
+} */
+.fntSize{
+    font-size: 20px;
+}
+.moment{
+    margin-left: 45px;
+}
+.pagnatr{
+font-size: 20px;
+
+
+}
+/* .demo-table {
+    width: 100%;
+  } */
+  
+  .mat-row .mat-cell {
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+    cursor: pointer;
+    border-color: white;
+   
+  }
+  
+  .mat-row:hover .mat-cell {
+    border-color: white;
+  }
+  
+  .demo-row-is-clicked {
+    font-weight: bold;
+  }
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+  table {
+    width: 90%;
+    height: 90%;
+  }
+  
+  .searchbar{
+    width: 80%;
+    transition: none !important;
+  }
+
+  .head{
+    font-size: 20px;
+ 
+    border: none;
+  }
+  table {
+    width: 100%;
+  
+  }
+  .momentTable{
+    padding-left: 30px;
+  
+  }
+ .mat-elevation-z8{
+  
+    transition: none !important;
+    box-shadow: none !important;
+ 
+ }

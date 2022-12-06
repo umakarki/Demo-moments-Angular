@@ -1,0 +1,49 @@
+<mat-toolbar class="toolBar">
+
+    <span class="imgSpan"><img class="img" src="../assets/images/innerEye.jpg"></span>
+    <button mat-icon-button color="accent" class="menu" aria-label="Example icon button with a menu icon"
+        (click)="toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <span style="margin-left: 65%;"><img class="rose" src="../assets/images/rose.jpeg">
+        <button mat-button [matMenuTriggerFor]="menu">
+            <mat-icon class="ArrowIcon">keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="signOutPos signoutMenu">
+            <button mat-menu-item (click)="logout()">SignOut</button>
+
+        </mat-menu>
+    </span>
+
+
+</mat-toolbar>
+
+
+<div class="example-container">
+    <mat-drawer-container class="example-container">
+        <mat-drawer class="side" mode="side" opened *ngIf="display">
+            <div class="profile">Profile</div>
+            <div class="dropdown">
+                <button class="dropdownToggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span style="margin-right: 150px;padding-bottom: 100px;">Moments</span>
+                    <mat-icon class="ArrowIcon1">keyboard_arrow_down</mat-icon>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="list-style-type:square">
+                    <li><a class="dropdown-item" routerLink="momentList">
+                            <mat-icon matListIcon style="font-size: 12px;">fiber_manual_record</mat-icon>Moment List
+                        </a></li>
+                    <li><a class="dropdown-item" routerLink="addNewMoment">
+                            <mat-icon matListIcon style="font-size: 12px;">fiber_manual_record</mat-icon>Add New Moment
+                        </a></li>
+
+                </ul>
+            </div>
+        </mat-drawer>
+
+        <mat-drawer-content class="main">
+
+            <router-outlet> </router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>

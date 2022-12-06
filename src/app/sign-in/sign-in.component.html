@@ -1,0 +1,48 @@
+<mat-toolbar class="toolBar">
+
+  <span style="margin-left: 46%;"><img class="img" src="../assets/images/innerEye.jpg"></span>
+</mat-toolbar>
+<div class="divContainer">
+  <div>
+    <h1><b>Sign In</b></h1>
+    <h3>To start using the app</h3>
+  </div>
+  <form [formGroup]="signinForm" (ngSubmit)="signIn()">
+    <div class="formContainer">
+      <mat-label class="lable">Enter Email-ID</mat-label><br>
+
+      <div class="icons">
+        <mat-icon>mail</mat-icon>
+      </div>
+
+      <mat-form-field class="name" floatLabel="never">
+
+        <input matInput placeholder="Uma88.itgmail.com" formControlName="emailId">
+      </mat-form-field><br>
+      <span class="errMsg" *ngIf="email && email.invalid && email.touched">Enter valid email-Id</span><br><br><br><br>
+
+
+      <mat-label class="mobile">Enter Password</mat-label><br>
+
+      <div class="icons">
+        <mat-icon>lock</mat-icon>
+      </div>
+
+      <mat-form-field class="name" floatLabel="never">
+        <input type="password" matInput placeholder="*****************" formControlName="password" [type]="hide?'password':'text'">
+        <button style="font-size: 20px;" mat-icon-button matSuffix (click)="hide = !hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+      </mat-form-field><br>
+
+
+      <span class="errMsg" *ngIf="password && password.invalid && password.touched">Enter Password</span><br><br><br><br>
+      <div>
+        <button class="btn" [disabled]="signinForm.invalid">Sign In</button>
+        <p class="alMem" routerLink="/signUp">Not a member? <span style="color:black;">Sign Up</span></p>
+      </div>
+    </div>
+
+  </form>
+</div>
